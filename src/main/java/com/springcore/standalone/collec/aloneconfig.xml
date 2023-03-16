@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:ctx="http://www.springframework.org/schema/context"
+	xmlns:util="http://www.springframework.org/schema/util"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:mvc="http://www.springframework.org/schema/mvc"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans 
+	http://www.springframework.org/schema/beans/spring-beans-2.5.xsd
+	http://www.springframework.org/schema/mvc
+	http://www.springframework.org/schema/mvc/spring-mvc-3.0.xsd
+	http://www.springframework.org/schema/context
+	http://www.springframework.org/schema/context/spring-context-2.5.xsd
+	http://www.springframework.org/schema/util
+	http://www.springframework.org/schema/util/spring-util-2.5.xsd">
+
+	<!-- standalone list -->
+	<util:list list-class="java.util.LinkedList" id="mbf">
+		<value>Aman</value>
+		<value>Adil</value>
+		<value>Amil</value>
+		<value>Samar</value>
+	</util:list>
+	<!-- stand alone map -->
+	<util:map map-class="java.util.HashMap" id="f1">
+		<entry key="Spring Framework" value="8000" />
+		<entry key="SpringBoot Framework" value="5000" />
+		<entry key="Hibernate Framework" value="2000" />
+	</util:map>
+	<bean class="com.springcore.standalone.collec.Person" name="p1">
+		<property name="friends" ref="mbf" />
+		<!-- <property name="friends"> <ref bean="mbf"/> </property> -->
+		<property name="fees" ref="f1" />
+	</bean>
+
+
+</beans>

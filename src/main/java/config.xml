@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:ctx="http://www.springframework.org/schema/context"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:mvc="http://www.springframework.org/schema/mvc"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans 
+	http://www.springframework.org/schema/beans/spring-beans-2.5.xsd
+	http://www.springframework.org/schema/mvc
+	http://www.springframework.org/schema/mvc/spring-mvc-3.0.xsd
+	http://www.springframework.org/schema/context
+	http://www.springframework.org/schema/context/spring-context-2.5.xsd ">
+
+<!-- setting bean value as a attribute -->
+	<bean class="com.springcore.Student" name="std1">
+		<property name="studentId" value="254" />
+		<property name="studentNaame" value="Amil" />
+		<property name="studentAddress" value="Lucknow" />
+	</bean>
+	<bean class="com.springcore.Student" name="std2">
+		<property name="studentId" value="2542" />
+		<property name="studentNaame" value="Amil Siddiqui" />
+		<property name="studentAddress" value="Lucknowites" />
+	</bean>
+
+	<!-- this is beans -->
+	<!-- <bean class="com.springcore.Student" name="std1"> <property name="studentId"> 
+		<value>24444</value> </property> <property name="studentNaame"> <value>Abdullah</value> 
+		</property> <property name="studentAddress"> <value>Delhi</value> </property> 
+		</bean> -->
+
+</beans>

@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:ctx="http://www.springframework.org/schema/context"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:mvc="http://www.springframework.org/schema/mvc"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans 
+	http://www.springframework.org/schema/beans/spring-beans-2.5.xsd
+	http://www.springframework.org/schema/mvc
+	http://www.springframework.org/schema/mvc/spring-mvc-3.0.xsd
+	http://www.springframework.org/schema/context
+	http://www.springframework.org/schema/context/spring-context-2.5.xsd ">
+
+	<bean class="com.springcore.constructorinjection.Certi" name="cer">
+		<constructor-arg value="Android using Kotlin" />
+	</bean>
+
+
+	<bean class="com.springcore.constructorinjection.Person"
+		name="person">
+		<constructor-arg value="Abdullah" />
+		<constructor-arg value="4021" />
+		<constructor-arg ref="cer" />
+	</bean>
+
+	<bean class="com.springcore.constructorinjection.Addition"
+		name="add">
+		<constructor-arg value="12" index="1" type="" />
+		<constructor-arg value="13" index="0" type="" />
+	</bean>
+</beans>
